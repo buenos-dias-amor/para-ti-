@@ -5,16 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonsContainer = document.querySelector('.buttons');
 
     const noButtonPhrases = [
-        '¿Segura?',
-        '¿Segurísima?',
-        '¿Completamente segura?',
+        'Segura?',
+        'Muy segura?',
+        'Segura segura?',
+        'Segurísima?',
+        'Completamente segura?',
         '¿No te arrepentirás?',
-        '¿Piénsalo otra vez?',
-        '¿Pero estás segura?',
-        '¿No hay vuelta atrás?',
-        '¿No hay reembolso?',
-        '¿No hay devolución?',
-        '¿No hay nada?',
+        'Piénsalo otra vez',
+        'Di que si por favor',
+        '😭😭',
+        'No hay vuelta atrás',
+        'No hay reembolso',
+        'No hay devolución',
+        'No hay nada',
         '¿Nada?'
     ];
     let noButtonClickCount = 0;
@@ -25,15 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.buttons').classList.add('hidden');
         
         const message = document.getElementById('message');
-        message.textContent = 'Mi amor, me haces tan feliz que seas mi San Valentín. Eres la luz de mi vida, y tus ojitos son mi debilidad. Me enamoro más de ti cada día😘❤ Sabía que dirías que sí jsjsj🤭';
+        message.textContent = 'Mi amor, estoy tan feliz de que seas mi San Valentín. Me haces falta cada segundo que estamos separados, tus ojitos me matan, eres tan hermosa😍😍... Te amo, te amo, te amo😘🩷 Sabía que dirías que sí jsjsj🤭';
         message.classList.remove('hidden');
         document.getElementById('secondImage').classList.remove('hidden');
          
     });
 
-    noButton.addEventListener('click', () => {
+    noButton.addEventListener('mouseover', () => {
         if (noButtonClickCount === 0) {
-            noButton.style.position = 'absolute';
+            noButton.style.position = 'absolute';    
         }
 
         const windowWidth = window.innerWidth;
@@ -43,13 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxY = windowHeight - buttonRect.height;
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
+
     noButton.style.left = `${randomX}px`;
     noButton.style.top = `${randomY}px`;
-
+    
         noButton.textContent = noButtonPhrases[noButtonClickCount % noButtonPhrases.length];
         noButtonClickCount++;
 
         const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-        yesButton.style.fontSize = `${currentSize + 4}px`;
+        yesButton.style.fontSize = `${currentSize + 0}px`;
     });
 });
