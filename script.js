@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const noButton = document.getElementById('noButton');
     const message = document.getElementById('message');
     const buttonsContainer = document.querySelector('.buttons');
+    const titulo = document.getElementById('titulo');
 
     const noButtonPhrases = [
         'Segura?',
@@ -22,17 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     let noButtonClickCount = 0;
 
-    document.getElementById('yesButton').addEventListener('click', function() {
+    yesButton.addEventListener('click', () => {
+        titulo.classList.add('hidden');
 
         document.getElementById('firstImage').classList.add('hidden');
-        document.querySelector('.buttons').classList.add('hidden');
-        
-        const message = document.getElementById('message');
+        buttonsContainer.classList.add('hidden');
+
         message.textContent = 'Mi amor, estoy tan feliz de que seas mi San Valentín. Me haces falta cada segundo que estamos separados, tus ojitos me matan, eres tan hermosa😍😍... Te amo, te amo, te amo😘🩷 Sabía que dirías que sí jsjsj🤭';
         message.classList.remove('hidden');
         document.getElementById('secondImage').classList.remove('hidden');
-         
     });
+
 
     noButton.addEventListener('mouseover', () => {
         if (noButtonClickCount === 0) {

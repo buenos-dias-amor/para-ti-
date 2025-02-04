@@ -69,14 +69,14 @@ button:hover {
 }
 
 .secondImage {
-    width: 300px;
+    width: 380px;
     animation: float 2s ease-in-out infinite;
     height: auto;
-    margin: 155;
+    margin: 10px;
 }
 
 #message {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 28px;
     color: #333;
 }
